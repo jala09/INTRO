@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "Clan-Book";
+    src: url("../fonts/clan-med-webfont.ttf") format("ttf");
+    /*
+    src: url("../fonts/Clan-Book.woff") format("woff"),
+    url("../fonts/clan-bookwebfont.woff2") format("woff2"),
+*/
+
+}
+
+
+
+
+* {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    overflow: hidden;
+    background-color: white;
+}
+
+main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+}
+
+main img {
+    width: 30vw;
+}
+
+main a:nth-child(2) {
+    padding-top: 0.7em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    z-index: 10000;
+}
+
+main a:nth-child(2) img {
+    width: 7em;
+}
+
+
+
+
+.tagline {
+    position: absolute;
+    bottom: 3em;
+    left: 3em;
+
+}
+
+.tagline img {
+    width: 1em;
+}
+
+
+
+div.ball {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    mix-blend-mode: difference;
+    animation: heartbeat 5s infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+
+@media only screen and (min-device-width : 320px) and (orientation : portrait) {
+
+    main img {
+        width: 70vw;
+    }
+
+    main a:nth-child(2) {
+        padding-top: 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+        z-index: 10000;
+    }
+
+    main a:nth-child(2) img {
+        width: 17em;
+
+    }
+
+
+
+
+    .tagline {
+        position: absolute;
+        bottom: 3em;
+        left: 3em;
+
+    }
+
+    .tagline img {
+        width: 1.8em;
+    }
+
+
+
+
+
+}
